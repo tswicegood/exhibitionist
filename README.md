@@ -2,8 +2,7 @@ Exhibitionist
 =============
 Not afraid to show off a little
 
-This is an empty repository for the [Node Knockout][].  There will be more once
-the fun begins.
-
+This was originally for the [Node Knockout][].  Conflicts got in the way, so
+expect development to start earlier. :-)
 
 [Node Knockout]: http://nodeknockout.com/
