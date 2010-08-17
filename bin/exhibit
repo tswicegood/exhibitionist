@@ -1,0 +1,13 @@
+#!/usr/bin/env coffee
+
+sys = require "sys"
+fs = require "fs"
+path = require "path"
+
+exhibitionPath = fs.realpathSync path.join(path.dirname(module.filename), '..', 'src')
+require.paths.unshift exhibitionPath
+
+exhibit = require "exhibitionist"
+e = new exhibit.Exhibitionist(process.ENV.PWD)
+e.run()
+
