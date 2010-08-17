@@ -24,12 +24,14 @@ noPresentationFound = (log) -> errorAndExit log, "Found a package.json, but ther
 noTitleSpecified = (log) -> errorAndExit log, "You must specify a title in your presentation"
 noSlideSections = (log) -> errorAndExit log, "You must provide at least one entry in the sections array"
 slidesNotCorrectType = (log) -> errorAndExit log, "`sections` must be an array"
+zeroSlides = (log) -> errorAndExit log, "You have an empty `sections` array.  How am I to exhibit anything?"
 
 checkConfig = (config, log) ->
   noPresentationFound(log) unless "presentation" of config
   noTitleSpecified(log) unless "title" of config.presentation
   noSlideSections(log) unless "sections" of config.presentation
   slidesNotCorrectType(log) unless sectionsConfigValueIsCorrect(config)
+  zeroSlides(log) unless config.presentation.sections.length > 0
 
 sectionsConfigValueIsCorrect = (config) ->
   t = typeof(config.presentation.sections)
