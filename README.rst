@@ -12,4 +12,9 @@ interaction from the audience, and controlling the presentation.
     pretty much nothing here works.  This document is meant as road map.
 
 
+.. Warning::
+    This code is being written currently as a proof-of-concept.  I intend to
+    throw it all out and rewrite it using TDD once I've proven the validity of
+    this approach.
+
 .. _Node.js: http://nodejs.org/
